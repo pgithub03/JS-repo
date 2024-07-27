@@ -40,6 +40,6 @@
 
 // const add = (n1 , n2) => n1+n2 //implicit return
     
-const add = () => ({username : "parijat"})
+const add = () => ({username : "parijat"})// => object data printed
 
 console.log(add());
