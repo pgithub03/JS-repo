@@ -36,6 +36,10 @@ const mycode = [
     }
 ]
 
-mycode.forEach((item)=>{
-    console.log(item.langfile);
-})
+// const values = mycode.forEach((item)=>{
+//     //console.log(item.langfile,item.langname);
+//     return item
+// })
+
+// console.log(values);
+
