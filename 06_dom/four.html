@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: black;color:white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+//this approach not good as it traverses entire node list so avoid it 
+    function addLang(langname){ 
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang("python")
+    addLang("cpp")
+//better apporach using creating a node and appending the child to li
+    function addOptilang(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilang("typescript")
+
+//++++++++++++++++++++++++++++++++++++++++
+
+    //Edit
+    const secondlang = document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML = "Mojo"
+    
+    //Edit
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli)
+
+    //edit
+    const firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = '<li>Swift</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
+</html>
