@@ -16,7 +16,7 @@
 
 // console.log(userBooks);
 
-const nums = [1,2,4,5,6,7,3]
+// const nums = [1,2,4,5,6,7,3]
 
 //const newnums = nums.map((num)=> {return num+10})
 //console.log(newnums);
@@ -34,3 +34,39 @@ const nums = [1,2,4,5,6,7,3]
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+// reduce 
+
+const nums = [1,2,3]
+
+// const total = nums.reduce(function (acc,curr) {
+//     console.log(`acc:${acc} and curr:${curr}`);
+//     return acc + curr
+// },0)
+
+//reduce with arrow function
+const total = nums.reduce((acc,curr)=>{
+    return acc + curr
+},0)
+
+console.log(total);
+
+const shop = [
+    {
+        itemName:"js",
+        price : 1200
+    },
+    {
+        itemName:"py",
+        price : 8200
+    },
+    {
+        itemName:"cpp",
+        price : 9200
+    }
+]
+
+const price = shop.reduce((acc,item)=>{
+    return item.price+acc
+},0)
+
+console.log(price);
