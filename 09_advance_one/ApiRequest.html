@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: greenyellow;">
+    
+</body>
+
+//API
+
+<script>
+    const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET',requestURL)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText) // convert string data to JSON 
+            console.log(data.followers);
+        }
+    }
+    
+    xhr.send();
+
+// console 
+// console is not part of js , neither is document,getElementbyId and all 
+// core js is just basic loops,arithmetic oprs , functions etc
+// console log is a debugging tool/debugger of browser , runtime of js
+// injects it 
+
+// There are many engines which run js , 
+// one of them is V8 engine
+// V8 engine gives all console.log, api access etc
+
+// whole js is just a wrapper over cpp 
+// the file V8-->d8-->contains the console.h ,  i.e. console.log() ,etc 
+
+
+
+
+</script>
+</html>
