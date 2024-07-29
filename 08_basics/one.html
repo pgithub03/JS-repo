@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body>  
+</body>
+<script>
+    // attactEvent()
+    // jQuery - on 
+    // document.getElementById('abc').onclick = function(){
+    //     alert("abc clicked")
+    // }
+    // document.getElementById('abc').addEventListener('click',function(){
+    //     alert("abc clicked")
+    // },false)
+    
+    
+    //what to study abt Events---------------
+    //type , timestamp , defaultPrevented
+    //target , toElement , srcElement , currentTarget
+    //clientX , clientY , screenX , screenY
+    //altkey , ctrlkey , shiftkey , keyCode
+
+
+
+
+    // document.getElementById('abc').addEventListener('click',function(e){
+    //     alert("clicked inside the ul")
+    // },false)
+
+
+    // document.getElementById('abc').addEventListener('click',function(e){
+    //     alert("abc clicked")
+    //     e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener
+    // ('click',function(e){
+    //     e.preventDefault()
+    //     e.defaultPrevented()
+    //     console.log("google clicked");
+    // },false)
+
+    //remove a img on clicking it 
+
+    document.querySelector('#images').addEventListener
+    ('click',function(e){
+        console.log(e.target.tagName);//returns parent of image 
+        
+        if(e.target.tagName==='IMG'){
+            //let removeIt = e.target.parentNode    
+            //removeIt.remove() ->removes the image 
+        }
+        
+        //removeIt.parentNode.removeChild(removeIt)
+    },false)
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
